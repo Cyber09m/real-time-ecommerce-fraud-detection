@@ -1,0 +1,136 @@
+[
+  {
+    "name": "late_transaction_after_job",
+    "events": [
+      {
+        "event_type": "transaction",
+        "user_id": "u-late",
+        "timestamp": "2026-08-16T10:30:00Z",
+        "amount": 100,
+        "category": "x",
+        "source": "merchant",
+        "event_id": "late-tx"
+      },
+      {
+        "event_type": "job_posting",
+        "user_id": "u-late",
+        "timestamp": "2026-08-16T10:10:00Z",
+        "amount": 0,
+        "category": "job",
+        "text_content": "normal job",
+        "source": "third_party",
+        "event_id": "job-1"
+      }
+    ]
+  },
+  {
+    "name": "duplicate_event_same_id",
+    "events": [
+      {
+        "event_type": "transaction",
+        "user_id": "u-dup",
+        "timestamp": "2026-08-16T10:00:00Z",
+        "amount": 100,
+        "category": "x",
+        "source": "merchant",
+        "event_id": "same-id"
+      },
+      {
+        "event_type": "transaction",
+        "user_id": "u-dup",
+        "timestamp": "2026-08-16T10:00:00Z",
+        "amount": 100,
+        "category": "x",
+        "source": "merchant",
+        "event_id": "same-id"
+      }
+    ]
+  },
+  {
+    "name": "admin_vs_merchant",
+    "events": [
+      {
+        "event_type": "transaction",
+        "user_id": "u-conflict",
+        "timestamp": "2026-08-16T10:00:00Z",
+        "amount": 1500,
+        "category": "x",
+        "source": "merchant",
+        "event_id": "merchant-risk"
+      },
+      {
+        "event_type": "user_behavior",
+        "user_id": "u-conflict",
+        "timestamp": "2026-08-16T10:01:00Z",
+        "amount": 0,
+        "category": "clear",
+        "source": "admin",
+        "event_id": "admin-clear"
+      }
+    ]
+  },
+  {
+    "name": "replay_changes_state",
+    "events": [
+      {
+        "event_type": "transaction",
+        "user_id": "u-replay",
+        "timestamp": "2026-08-16T10:30:00Z",
+        "amount": 100,
+        "category": "x",
+        "source": "merchant",
+        "event_id": "r-3"
+      },
+      {
+        "event_type": "transaction",
+        "user_id": "u-replay",
+        "timestamp": "2026-08-16T10:00:00Z",
+        "amount": 100,
+        "category": "x",
+        "source": "merchant",
+        "event_id": "r-1"
+      },
+      {
+        "event_type": "transaction",
+        "user_id": "u-replay",
+        "timestamp": "2026-08-16T10:20:00Z",
+        "amount": 100,
+        "category": "x",
+        "source": "merchant",
+        "event_id": "r-2"
+      }
+    ]
+  },
+  {
+    "name": "three_transaction_boundary",
+    "events": [
+      {
+        "event_type": "transaction",
+        "user_id": "u-boundary",
+        "timestamp": "2026-08-16T10:00:00Z",
+        "amount": 100,
+        "category": "x",
+        "source": "merchant",
+        "event_id": "b-1"
+      },
+      {
+        "event_type": "transaction",
+        "user_id": "u-boundary",
+        "timestamp": "2026-08-16T10:30:00Z",
+        "amount": 100,
+        "category": "x",
+        "source": "merchant",
+        "event_id": "b-2"
+      },
+      {
+        "event_type": "transaction",
+        "user_id": "u-boundary",
+        "timestamp": "2026-08-16T11:00:00Z",
+        "amount": 100,
+        "category": "x",
+        "source": "merchant",
+        "event_id": "b-3"
+      }
+    ]
+  }
+]
