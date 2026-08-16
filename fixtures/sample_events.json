@@ -1,0 +1,7 @@
+[
+  {"event_type":"transaction","user_id":"demo-user","timestamp":"2026-08-16T10:00:00Z","amount":100,"category":"electronics","source":"merchant","event_id":"demo-001"},
+  {"event_type":"transaction","user_id":"demo-user","timestamp":"2026-08-16T10:30:00Z","amount":200,"category":"electronics","source":"merchant","event_id":"demo-002"},
+  {"event_type":"transaction","user_id":"demo-user","timestamp":"2026-08-16T11:00:00Z","amount":300,"category":"electronics","source":"merchant","event_id":"demo-003"},
+  {"event_type":"transaction","user_id":"high-value","timestamp":"2026-08-16T12:00:00Z","amount":1500,"category":"laptop","source":"merchant","event_id":"demo-004"},
+  {"event_type":"user_behavior","user_id":"high-value","timestamp":"2026-08-16T12:01:00Z","amount":0,"category":"clear","source":"admin","event_id":"demo-005"}
+]
